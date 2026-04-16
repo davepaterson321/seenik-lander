@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { Hero } from '@/app/components/Hero';
-import { Transformation } from '@/app/components/Transformation';
-import { Product } from '@/app/components/Product';
 import { ShowcaseGallery } from '@/app/components/ShowcaseGallery';
-import { UseCases } from '@/app/components/UseCases';
-import { EmailCTA } from '@/app/components/EmailCTA';
+import { BackdropFormat } from '@/app/components/BackdropFormat';
+import { MaterialsAndVersatility } from '@/app/components/MaterialsAndVersatility';
+import { CollectionFooter } from '@/app/components/CollectionFooter';
+import { NewsletterSignup } from '@/app/components/NewsletterSignup';
 import { toast } from 'sonner';
 import { Toaster } from '@/app/components/ui/sonner';
 
@@ -13,9 +13,9 @@ export default function App() {
 
   const handleEmailSubmit = async (email: string) => {
     if (isSubmitting) return;
-    
+
     setIsSubmitting(true);
-    
+
     try {
       const response = await fetch('https://formspree.io/f/mqarlgjl', {
         method: 'POST',
@@ -27,7 +27,7 @@ export default function App() {
 
       if (response.ok) {
         toast.success('Thank you! You\'re on the list.', {
-          description: 'We\'ll notify you when SEENIK launches.',
+          description: 'We\'ll let you know when new backdrops drop.',
         });
       } else {
         throw new Error('Submission failed');
@@ -45,24 +45,17 @@ export default function App() {
   return (
     <div className="min-h-screen bg-black text-white dark w-full overflow-x-hidden">
       <Toaster />
-      
-      {/* Hero Section */}
-      <Hero onEmailSubmit={handleEmailSubmit} isSubmitting={isSubmitting} />
-      
-      {/* What We Create */}
-      <Product />
-      
-      {/* Showcase Gallery */}
+
+      <Hero />
+
       <ShowcaseGallery />
-      
-      {/* Problem → Transformation */}
-      <Transformation />
-      
-      {/* Use Cases */}
-      <UseCases />
-      
-      {/* Email CTA */}
-      <EmailCTA onEmailSubmit={handleEmailSubmit} isSubmitting={isSubmitting} />
+
+      <BackdropFormat />
+
+      <MaterialsAndVersatility />
+
+      <CollectionFooter />
+      <NewsletterSignup onEmailSubmit={handleEmailSubmit} isSubmitting={isSubmitting} />
     </div>
   );
 }

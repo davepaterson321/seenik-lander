@@ -1,0 +1,29 @@
+import ShowcaseBackdrop2 from '../../assets/showcase/showcase-backdrop-2.png';
+
+export function BackdropFormat() {
+  return (
+    <section className="relative py-20 md:py-24 px-4 md:px-8 lg:px-10 bg-black overflow-hidden">
+      <div className="max-w-[1500px] mx-auto">
+        <div className="max-w-4xl mb-10 md:mb-12">
+          <span className="block text-xs uppercase tracking-[0.3em] text-white/50 mb-4">
+            Product format
+          </span>
+          <h2 className="text-3xl md:text-4xl text-white uppercase tracking-[0.1em] font-light leading-tight mb-5 break-words">
+            40&quot; x 14.5&quot; panoramic backdrops
+          </h2>
+          <p className="text-base md:text-lg text-gray-300 leading-relaxed break-words">
+            A wide format (approx. 102cm x 37cm) made for cabinets, shelves and hobby photography. Big enough to set the scene, but easy to fit into a real display.
+          </p>
+        </div>
+
+        <div className="relative overflow-hidden">
+          <img
+            src={ShowcaseBackdrop2}
+            alt="40 inch by 14.5 inch panoramic backdrop format example"
+            className="w-full h-auto object-cover block"
+          />
+        </div>
+      </div>
+    </section>
+  );
+}
