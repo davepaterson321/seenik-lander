@@ -14,8 +14,10 @@ import {
 } from '@/app/config';
 
 import WHSandCitadel from '../../assets/showcase/WH-sand-citadel.jpg';
+import WHSnowFortress from '../../assets/showcase/WH-snow-fortress.jpg';
 import Napoleonic from '../../assets/showcase/napoleonic.jpg';
 import OilFields from '../../assets/showcase/oil-fields.jpg';
+import NorthAfrica from '../../assets/showcase/north-africa.jpg';
 import CivilWar from '../../assets/showcase/civil-war.jpg';
 import Jacobean from '../../assets/showcase/jacobean.jpg';
 import Stalingrad from '../../assets/showcase/stalingrad.jpg';
@@ -46,7 +48,7 @@ export function ShowcaseGallery() {
       {
         src: Jacobean,
         alt: 'Jacobean battle backdrop',
-        title: 'Jacobean',
+        title: 'Jacobean / ECW',
         ebayUrl: EBAY_JACOBEAN_LISTING_URL,
       },
       {
@@ -62,6 +64,12 @@ export function ShowcaseGallery() {
         comingSoonLabel: 'Coming soon',
       },
       {
+        src: NorthAfrica,
+        alt: 'North Africa backdrop',
+        title: 'North Africa',
+        comingSoonLabel: 'Coming soon',
+      },
+      {
         src: CivilWar,
         alt: 'American Civil War backdrop',
         title: 'Civil War',
@@ -71,6 +79,13 @@ export function ShowcaseGallery() {
         src: WHSandCitadel,
         alt: 'Desert citadel backdrop',
         title: 'Desert Citadel',
+        categoryTag: 'Fantasy',
+        comingSoonLabel: 'Coming soon',
+      },
+      {
+        src: WHSnowFortress,
+        alt: 'Snow fortress backdrop',
+        title: 'Snow Fortress',
         categoryTag: 'Fantasy',
         comingSoonLabel: 'Coming soon',
       },
@@ -97,7 +112,11 @@ export function ShowcaseGallery() {
   }, [carouselApi]);
 
   return (
-    <section className="py-6 md:py-8 relative overflow-hidden bg-black px-4 md:px-8 lg:px-10" aria-label="Backdrop showcase">
+    <section
+      id="showcase-gallery"
+      className="py-6 md:py-8 relative overflow-hidden bg-black px-4 md:px-8 lg:px-10"
+      aria-label="Backdrop showcase"
+    >
       <div className="max-w-[1500px] mx-auto">
         <div className="text-center py-6 md:py-8 lg:py-10 mb-4 md:mb-6">
           <h2 className="text-lg md:text-2xl lg:text-3xl uppercase tracking-[0.28em] text-white/85 font-light">

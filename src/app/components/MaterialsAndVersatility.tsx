@@ -21,7 +21,7 @@ export function MaterialsAndVersatility() {
               Flexible display fit
             </h3>
             <p className="text-base md:text-lg text-gray-300 leading-relaxed">
-              Our widescreen format allows you to utilise the backdrop in any display environment. Cut to fit - or go full-on 40 inch diorama.
+              Our panoramic format allows you to utilise your backdrop in any display environment. Cut to fit - or go full-on 40 inch diorama.
             </p>
           </div>
 

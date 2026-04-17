@@ -12,7 +12,7 @@ export function BackdropFormat() {
             40&quot; x 14.5&quot; panoramic backdrops
           </h2>
           <p className="text-base md:text-lg text-gray-300 leading-relaxed break-words">
-            A wide format (approx. 102cm x 37cm) made for cabinets, shelves and hobby photography. Big enough to set the scene, but easy to fit into a real display.
+            Our wide format is designed especially for cabinets, shelves, hobby photography and even table-top gaming scenarios. Versatile enough to set the scene, whatever your display.
           </p>
         </div>
 

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import Seenik from '@/imports/Seenik';
-import { ArrowUpRight, Mail } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, Mail } from 'lucide-react';
 import heroBackground from '@/assets/f9b65bc42d8dfbb3fc7e206558bd53b8493d18f6.png';
 import { CONTACT_MAILTO, EBAY_STORE_URL } from '@/app/config';
 
@@ -12,6 +12,13 @@ interface HeroProps {
 
 export function Hero({ videoSrc }: HeroProps) {
   const [isLoaded, setIsLoaded] = useState(false);
+
+  const handleExploreClick = () => {
+    document.getElementById('showcase-gallery')?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  };
 
   useEffect(() => {
     const timer = setTimeout(() => setIsLoaded(true), 100);
@@ -52,7 +59,7 @@ export function Hero({ videoSrc }: HeroProps) {
       {/* Top Bar: Logo + CTAs */}
       <div className="relative z-10 flex flex-row justify-between items-center px-6 pt-6 md:pt-8 gap-4">
         <div
-          className={`w-32 sm:w-40 md:w-56 lg:w-64 flex-shrink-0 transition-opacity duration-1000 ${
+          className={`w-32 sm:w-40 md:w-56 flex-shrink-0 transition-opacity duration-1000 ${
             isLoaded ? 'opacity-100' : 'opacity-0'
           }`}
           style={{ transitionDelay: '500ms' }}
@@ -72,16 +79,7 @@ export function Hero({ videoSrc }: HeroProps) {
             aria-label="Get in touch by email"
           >
             <Mail className="w-4 h-4" />
-            <span className="hidden sm:inline">Contact</span>
-          </a>
-          <a
-            href={EBAY_STORE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 sm:px-6 py-3 bg-white text-black hover:bg-gray-200 transition-colors tracking-wide whitespace-nowrap"
-          >
-            <span>Shop on eBay</span>
-            <ArrowUpRight className="w-4 h-4" />
+            <span className="hidden sm:inline">Get in touch</span>
           </a>
         </div>
       </div>
@@ -105,11 +103,36 @@ export function Hero({ videoSrc }: HeroProps) {
         >
           Elevate your displays with collector-grade panoramic environments.
         </p>
+        <div
+          className={`mt-8 transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+          style={{ transitionDelay: '1100ms' }}
+        >
+          <a
+            href={EBAY_STORE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 sm:px-6 py-3 bg-white text-black hover:bg-gray-200 transition-colors tracking-wide whitespace-nowrap"
+          >
+            <span>Shop on eBay</span>
+            <ArrowUpRight className="w-4 h-4" />
+          </a>
+        </div>
       </div>
 
-      {/* Minimal scroll cue */}
+      {/* Explore cue */}
       <div className="relative z-10 flex flex-col items-center pb-12 gap-3">
-        <div className="w-px h-16 bg-gradient-to-b from-white/40 to-transparent animate-pulse"></div>
+        <button
+          type="button"
+          onClick={handleExploreClick}
+          aria-label="Explore showcase section"
+          className={`inline-flex cursor-pointer flex-col items-center gap-2 text-white/80 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-black ${
+            isLoaded ? 'opacity-100' : 'opacity-0'
+          } transition-opacity duration-1000`}
+          style={{ transitionDelay: '1200ms' }}
+        >
+          <span className="text-xs uppercase tracking-[0.24em]">Explore</span>
+          <ArrowRight className="w-4 h-4 rotate-90 animate-pulse" />
+        </button>
       </div>
     </section>
   );

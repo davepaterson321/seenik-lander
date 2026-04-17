@@ -1,4 +1,4 @@
-import { ArrowUpRight, Mail } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import backgroundImage from '@/assets/a2bbdec426a5ce1f0c6c9ad0cf0a77b1db430c76.png';
 import { CONTACT_MAILTO, EBAY_STORE_URL } from '@/app/config';
 
@@ -17,14 +17,10 @@ export function CollectionFooter() {
       </div>
 
       <div className="max-w-3xl mx-auto relative z-10 text-center">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl text-white mb-6 uppercase tracking-[0.15em] font-light break-words">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl text-white mb-8 uppercase tracking-[0.15em] font-light break-words">
           Elevate your display today
         </h2>
-        <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-10 break-words">
-          Head over to eBay or reach out to the team - we're happy to help before you order.
-        </p>
-
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-stretch sm:items-center">
+        <div className="flex justify-center mb-8">
           <a
             href={EBAY_STORE_URL}
             target="_blank"
@@ -34,14 +30,17 @@ export function CollectionFooter() {
             <span>Shop on eBay</span>
             <ArrowUpRight className="w-4 h-4" />
           </a>
+        </div>
+        <p className="text-lg md:text-xl text-gray-300 leading-relaxed break-words">
+          Got questions?{' '}
           <a
             href={CONTACT_MAILTO}
-            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-transparent border border-white/30 text-white hover:bg-white/10 transition-colors tracking-wide"
+            className="underline decoration-dotted underline-offset-4 hover:text-white transition-colors"
           >
-            <Mail className="w-4 h-4" />
-            <span>Get in touch</span>
-          </a>
-        </div>
+            Get in touch
+          </a>{' '}
+          - our team are happy to help before you order.
+        </p>
       </div>
     </section>
   );
