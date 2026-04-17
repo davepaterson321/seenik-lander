@@ -185,7 +185,7 @@ export function ShowcaseGallery() {
                 onClick={() => carouselApi?.scrollPrev()}
                 disabled={!carouselApi}
                 aria-label="Previous backdrop"
-                className="inline-flex size-8 items-center justify-center rounded-full text-white/80 transition hover:bg-white/10 hover:text-white disabled:cursor-not-allowed disabled:opacity-40"
+                className="inline-flex size-8 cursor-pointer items-center justify-center rounded-full text-white/80 transition hover:bg-white/10 hover:text-white disabled:cursor-not-allowed disabled:opacity-40"
               >
                 <ArrowLeft className="size-4" />
               </button>
@@ -203,7 +203,7 @@ export function ShowcaseGallery() {
                 onClick={() => carouselApi?.scrollNext()}
                 disabled={!carouselApi}
                 aria-label="Next backdrop"
-                className="inline-flex size-8 items-center justify-center rounded-full text-white/80 transition hover:bg-white/10 hover:text-white disabled:cursor-not-allowed disabled:opacity-40"
+                className="inline-flex size-8 cursor-pointer items-center justify-center rounded-full text-white/80 transition hover:bg-white/10 hover:text-white disabled:cursor-not-allowed disabled:opacity-40"
               >
                 <ArrowRight className="size-4" />
               </button>
