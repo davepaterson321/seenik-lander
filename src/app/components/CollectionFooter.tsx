@@ -17,7 +17,7 @@ export function CollectionFooter() {
       </div>
 
       <div className="max-w-3xl mx-auto relative z-10 text-center">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl text-white mb-8 uppercase tracking-[0.15em] font-light break-words">
+        <h2 className="type-display text-white mb-8 uppercase tracking-[0.15em] font-light break-words">
           Elevate your display today
         </h2>
         <div className="flex justify-center mb-8">
@@ -27,11 +27,11 @@ export function CollectionFooter() {
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-black hover:bg-gray-200 transition-colors tracking-wide"
           >
-            <span>Shop on eBay</span>
+            <span>Buy now on eBay</span>
             <ArrowUpRight className="w-4 h-4" />
           </a>
         </div>
-        <p className="text-lg md:text-xl text-gray-300 leading-relaxed break-words">
+        <p className="type-lead text-gray-300 leading-relaxed break-words">
           Got questions?{' '}
           <a
             href={CONTACT_MAILTO}

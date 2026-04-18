@@ -87,7 +87,7 @@ export function Hero({ videoSrc }: HeroProps) {
       {/* Center Content */}
       <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-6 text-center">
         <h1
-          className={`text-4xl md:text-5xl lg:text-6xl text-white mb-6 uppercase tracking-[0.15em] font-light max-w-4xl w-full transition-opacity duration-1000 break-words ${
+          className={`type-display text-white mb-6 uppercase tracking-[0.15em] font-light max-w-4xl w-full transition-opacity duration-1000 break-words ${
             isLoaded ? 'opacity-100' : 'opacity-0'
           }`}
           style={{ transitionDelay: '700ms' }}
@@ -96,7 +96,7 @@ export function Hero({ videoSrc }: HeroProps) {
         </h1>
 
         <p
-          className={`text-lg md:text-xl text-gray-400 max-w-2xl w-full leading-relaxed transition-opacity duration-1000 break-words ${
+          className={`type-lead text-gray-400 max-w-2xl w-full leading-relaxed transition-opacity duration-1000 break-words ${
             isLoaded ? 'opacity-100' : 'opacity-0'
           }`}
           style={{ transitionDelay: '900ms' }}
@@ -113,7 +113,7 @@ export function Hero({ videoSrc }: HeroProps) {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-4 sm:px-6 py-3 bg-white text-black hover:bg-gray-200 transition-colors tracking-wide whitespace-nowrap"
           >
-            <span>Shop on eBay</span>
+            <span>Buy now on eBay</span>
             <ArrowUpRight className="w-4 h-4" />
           </a>
         </div>
@@ -130,7 +130,7 @@ export function Hero({ videoSrc }: HeroProps) {
           } transition-opacity duration-1000`}
           style={{ transitionDelay: '1200ms' }}
         >
-          <span className="text-xs uppercase tracking-[0.24em]">Explore</span>
+          <span className="type-overline uppercase tracking-[0.24em]">Explore</span>
           <ArrowRight className="w-4 h-4 rotate-90 animate-pulse" />
         </button>
       </div>

@@ -12,6 +12,8 @@ Concise rules for coding in this repo. For Cursor-specific mechanics, see [Curso
 - Prefer the shared [`Button`](src/app/components/ui/button.tsx) (`buttonVariants`) for interactive controls so pointer cursor, focus rings, and disabled behavior stay consistent.
 - If you use a raw `<button>`, add `cursor-pointer` for the default state and `disabled:cursor-not-allowed` (or similar) when disabled—do not rely on browser defaults alone for affordances.
 - Match existing layout patterns: Tailwind utility classes, spacing, and typography already used in neighboring components.
+- Use shared typography utilities from [`src/styles/theme.css`](src/styles/theme.css) instead of ad-hoc text sizes. Prefer: `type-display` (hero/display), `type-heading-xl`/`type-heading-lg`/`type-heading` (section and card headings), `type-body`/`type-body-lg`/`type-lead` (body copy), `type-overline` (eyebrows/meta), `type-control` (buttons/links), and `type-field` (inputs/textareas).
+- Avoid arbitrary font-size utilities (for example `text-[10px]`) and inline `fontSize` styles unless there is a documented accessibility or browser-specific requirement.
 - Keep changes minimal; don’t refactor unrelated code in the same pass.
 
 ## Assets and content

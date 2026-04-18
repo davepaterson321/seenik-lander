@@ -120,6 +120,56 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+@layer components {
+  .type-display {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  .type-heading {
+    @apply text-xl md:text-2xl;
+  }
+
+  .type-heading-prominent {
+    @apply text-xl md:text-2xl lg:text-3xl;
+  }
+
+  .type-heading-lg {
+    @apply text-xl md:text-3xl;
+  }
+
+  .type-heading-xl {
+    @apply text-3xl md:text-4xl;
+  }
+
+  .type-title {
+    @apply text-lg md:text-xl;
+  }
+
+  .type-body {
+    @apply text-sm md:text-base;
+  }
+
+  .type-body-lg {
+    @apply text-base md:text-lg;
+  }
+
+  .type-lead {
+    @apply text-lg md:text-xl;
+  }
+
+  .type-overline {
+    @apply text-xs;
+  }
+
+  .type-control {
+    @apply text-sm;
+  }
+
+  .type-field {
+    @apply text-base md:text-sm;
+  }
+}
+
 @layer base {
   *,
   *::before,
