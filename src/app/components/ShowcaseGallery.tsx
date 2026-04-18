@@ -44,7 +44,7 @@ const buyNowItems: BuyNowImage[] = [
   {
     src: Stalingrad,
     alt: 'Stalingrad battle backdrop',
-    title: 'Stalingrad',
+    title: 'WW2 EASTERN FRONT',
     ebayUrl: EBAY_STALINGRAD_LISTING_URL,
   },
   {
