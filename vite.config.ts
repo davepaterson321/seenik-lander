@@ -11,6 +11,16 @@ export default defineConfig({
     tailwindcss(),
   ],
 
+  build: {
+    rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, 'index.html'),
+        displaysBackdrops: path.resolve(__dirname, 'displays-backdrops.html'),
+        tabletopGamingBackdrops: path.resolve(__dirname, 'tabletop-gaming-backdrops.html'),
+      },
+    },
+  },
+
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
