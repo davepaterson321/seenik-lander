@@ -30,8 +30,8 @@ export function LandingSplitSection({
   const gridAlignmentClass = matchColumnHeights ? 'items-stretch' : 'items-start';
   const equalHeightClass = matchColumnHeights ? 'h-full' : '';
   const imageDefaultFrameClass = matchColumnHeights
-    ? 'aspect-[4/3] md:aspect-[3/4]'
-    : 'aspect-[4/3]';
+    ? 'aspect-square md:aspect-[3/4]'
+    : 'aspect-square';
   const contentClasses = [
     'rounded-lg border border-white/10 p-6 sm:px-8 sm:py-10',
     contentOrderClass,

@@ -8,7 +8,7 @@ import sandCitadel from '@/assets/showcase/WH-sand-citadel.jpg';
 import gamingDice from '@/assets/tabletop-landing/gaming-dice.jpeg';
 import northAfrica from '@/assets/tabletop-landing/north-africa.jpg';
 import civilWar from '@/assets/tabletop-landing/civil-war.jpg';
-import heroBackground from '@/assets/tabletop-landing/hero-background.png';
+import heroBackground from '@/assets/hero-bg.jpg';
 import '@/styles/index.css';
 
 function TabletopGamingLandingPage() {

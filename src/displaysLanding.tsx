@@ -7,7 +7,7 @@ import { LandingSplitSection } from '@/app/components/LandingSplitSection';
 import cabinetView from '@/assets/displays-landing/cabinet-view.png';
 import jacobean from '@/assets/displays-landing/jacobean.jpg';
 import oilFields from '@/assets/displays-landing/oil-fields.jpg';
-import heroBackground from '@/assets/displays-landing/hero-background.png';
+import heroBackground from '@/assets/hero-bg.jpg';
 import '@/styles/index.css';
 
 function DisplaysLandingPage() {

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import Seenik from '@/imports/Seenik';
 import { ArrowRight, ArrowUpRight, Mail } from 'lucide-react';
-import heroBackground from '@/assets/f9b65bc42d8dfbb3fc7e206558bd53b8493d18f6.png';
+import heroBackground from '@/assets/hero-bg.jpg';
 import { CONTACT_MAILTO, EBAY_STORE_URL } from '@/app/config';
 
 interface HeroProps {
@@ -38,18 +38,18 @@ export function Hero({ videoSrc }: HeroProps) {
               muted
               loop
               playsInline
-              className="w-full h-full object-cover opacity-40"
+              className="w-full h-full object-cover opacity-60"
             />
           ) : (
             <img
               src={heroBackground}
               alt=""
-              className="w-full h-full object-cover opacity-40"
+              className="w-full h-full object-cover opacity-60"
             />
           )}
         </div>
         <div
-          className={`absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black transition-opacity duration-1000 ${
+          className={`absolute inset-0 bg-gradient-to-b from-black/35 via-black/18 to-black/95 transition-opacity duration-[1200ms] ${
             isLoaded ? 'opacity-100' : 'opacity-0'
           }`}
           style={{ transitionDelay: '300ms' }}
@@ -59,7 +59,7 @@ export function Hero({ videoSrc }: HeroProps) {
       {/* Top Bar: Logo + CTAs */}
       <div className="relative z-10 flex flex-row justify-between items-center px-6 pt-6 md:pt-8 gap-4">
         <div
-          className={`w-32 sm:w-40 md:w-56 flex-shrink-0 transition-opacity duration-1000 ${
+          className={`w-32 sm:w-40 md:w-56 flex-shrink-0 transition-opacity duration-[1200ms] ${
             isLoaded ? 'opacity-100' : 'opacity-0'
           }`}
           style={{ transitionDelay: '500ms' }}
@@ -68,7 +68,7 @@ export function Hero({ videoSrc }: HeroProps) {
         </div>
 
         <div
-          className={`flex items-center gap-2 sm:gap-3 flex-shrink-0 transition-opacity duration-1000 ${
+          className={`flex items-center gap-2 sm:gap-3 flex-shrink-0 transition-opacity duration-[1200ms] ${
             isLoaded ? 'opacity-100' : 'opacity-0'
           }`}
           style={{ transitionDelay: '500ms' }}
@@ -87,7 +87,7 @@ export function Hero({ videoSrc }: HeroProps) {
       {/* Center Content */}
       <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-6 text-center">
         <h1
-          className={`type-display text-white mb-6 uppercase tracking-[0.15em] font-light max-w-4xl w-full transition-opacity duration-1000 break-words ${
+          className={`type-display text-white mb-6 uppercase tracking-[0.15em] font-light max-w-4xl w-full transition-opacity duration-[1200ms] break-words ${
             isLoaded ? 'opacity-100' : 'opacity-0'
           }`}
           style={{ transitionDelay: '700ms' }}
@@ -96,7 +96,7 @@ export function Hero({ videoSrc }: HeroProps) {
         </h1>
 
         <p
-          className={`type-lead text-gray-400 max-w-2xl w-full leading-relaxed transition-opacity duration-1000 break-words ${
+          className={`type-lead text-white max-w-2xl w-full leading-relaxed transition-opacity duration-[1200ms] break-words ${
             isLoaded ? 'opacity-100' : 'opacity-0'
           }`}
           style={{ transitionDelay: '900ms' }}
@@ -104,7 +104,7 @@ export function Hero({ videoSrc }: HeroProps) {
           Elevate your displays with collector-grade panoramic environments.
         </p>
         <div
-          className={`mt-8 transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+          className={`mt-8 transition-opacity duration-[1200ms] ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
           style={{ transitionDelay: '1100ms' }}
         >
           <a
@@ -127,7 +127,7 @@ export function Hero({ videoSrc }: HeroProps) {
           aria-label="Explore showcase section"
           className={`inline-flex cursor-pointer flex-col items-center gap-2 text-white/80 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-black ${
             isLoaded ? 'opacity-100' : 'opacity-0'
-          } transition-opacity duration-1000`}
+          } transition-opacity duration-[1200ms]`}
           style={{ transitionDelay: '1200ms' }}
         >
           <span className="type-overline uppercase tracking-[0.24em]">Explore</span>
