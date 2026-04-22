@@ -11,7 +11,9 @@ import {
 import {
   EBAY_GULF_WAR_LISTING_URL,
   EBAY_JACOBEAN_LISTING_URL,
+  EBAY_NORTH_AFRICA_LISTING_URL,
   EBAY_NAPOLEONIC_LISTING_URL,
+  EBAY_POLAR_FORTRESS_LISTING_URL,
   EBAY_STALINGRAD_LISTING_URL,
 } from '@/app/config';
 
@@ -48,6 +50,12 @@ const buyNowItems: BuyNowImage[] = [
     ebayUrl: EBAY_STALINGRAD_LISTING_URL,
   },
   {
+    src: NorthAfrica,
+    alt: 'North Africa backdrop',
+    title: 'North Africa',
+    ebayUrl: EBAY_NORTH_AFRICA_LISTING_URL,
+  },
+  {
     src: Jacobean,
     alt: 'Jacobean battle backdrop',
     title: 'Jacobean / ECW',
@@ -65,14 +73,16 @@ const buyNowItems: BuyNowImage[] = [
     title: 'GULF WAR',
     ebayUrl: EBAY_GULF_WAR_LISTING_URL,
   },
+  {
+    src: WHSnowFortress,
+    alt: 'Polar fortress backdrop',
+    title: 'Polar Fortress',
+    categoryTag: 'Fantasy',
+    ebayUrl: EBAY_POLAR_FORTRESS_LISTING_URL,
+  },
 ];
 
 const comingSoonItems: ComingSoonImage[] = [
-  {
-    src: NorthAfrica,
-    alt: 'North Africa backdrop',
-    title: 'North Africa',
-  },
   {
     src: CivilWar,
     alt: 'American Civil War backdrop',
@@ -82,12 +92,6 @@ const comingSoonItems: ComingSoonImage[] = [
     src: WHSandCitadel,
     alt: 'Desert citadel backdrop',
     title: 'Desert Citadel',
-    categoryTag: 'Fantasy',
-  },
-  {
-    src: WHSnowFortress,
-    alt: 'Snow fortress backdrop',
-    title: 'Snow Fortress',
     categoryTag: 'Fantasy',
   },
 ];

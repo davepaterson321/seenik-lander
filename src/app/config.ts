@@ -11,6 +11,10 @@ export const EBAY_STALINGRAD_LISTING_URL = 'https://ebay.us/m/jA6xZv';
 export const EBAY_NAPOLEONIC_LISTING_URL = 'https://ebay.us/m/KC53Gt';
 /** Gulf War backdrop listing on eBay. */
 export const EBAY_GULF_WAR_LISTING_URL = 'https://ebay.us/m/BdbfPW';
+/** North Africa backdrop listing on eBay. */
+export const EBAY_NORTH_AFRICA_LISTING_URL = 'https://ebay.us/m/V5e4rq';
+/** Polar Fortress backdrop listing on eBay. */
+export const EBAY_POLAR_FORTRESS_LISTING_URL = 'https://ebay.us/m/O61CV1';
 export const CONTACT_EMAIL = 'hello@seenik.co.uk';
 
 export const CONTACT_MAILTO = `mailto:${CONTACT_EMAIL}`;
