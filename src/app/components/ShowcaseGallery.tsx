@@ -9,6 +9,7 @@ import {
   CarouselItem,
 } from './ui/carousel';
 import {
+  EBAY_DESERT_CITADEL_LISTING_URL,
   EBAY_GULF_WAR_LISTING_URL,
   EBAY_JACOBEAN_LISTING_URL,
   EBAY_NORTH_AFRICA_LISTING_URL,
@@ -19,6 +20,7 @@ import {
 
 import WHSnowFortress from '../../assets/showcase/WH-snow-fortress.jpg';
 import WHSandCitadel from '../../assets/showcase/WH-sand-citadel.jpg';
+import WHArmageddon from '../../assets/showcase/WH-armageddon.jpg';
 import Napoleonic from '../../assets/showcase/napoleonic.jpg';
 import NorthAfrica from '../../assets/showcase/north-africa.jpg';
 import CivilWar from '../../assets/showcase/civil-war.jpg';
@@ -80,6 +82,13 @@ const buyNowItems: BuyNowImage[] = [
     categoryTag: 'Fantasy',
     ebayUrl: EBAY_POLAR_FORTRESS_LISTING_URL,
   },
+  {
+    src: WHSandCitadel,
+    alt: 'Desert citadel backdrop',
+    title: 'Desert Citadel',
+    categoryTag: 'Fantasy',
+    ebayUrl: EBAY_DESERT_CITADEL_LISTING_URL,
+  },
 ];
 
 const comingSoonItems: ComingSoonImage[] = [
@@ -89,9 +98,9 @@ const comingSoonItems: ComingSoonImage[] = [
     title: 'Civil War',
   },
   {
-    src: WHSandCitadel,
-    alt: 'Desert citadel backdrop',
-    title: 'Desert Citadel',
+    src: WHArmageddon,
+    alt: 'Armageddon backdrop',
+    title: 'Armageddon',
     categoryTag: 'Fantasy',
   },
 ];
