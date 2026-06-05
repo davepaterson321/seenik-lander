@@ -9,53 +9,59 @@ import {
   CarouselItem,
 } from './ui/carousel';
 import {
-  EBAY_DESERT_CITADEL_LISTING_URL,
+  EBAY_CRIMEA_LISTING_URL,
   EBAY_GULF_WAR_LISTING_URL,
   EBAY_JACOBEAN_LISTING_URL,
   EBAY_NORTH_AFRICA_LISTING_URL,
   EBAY_NAPOLEONIC_LISTING_URL,
-  EBAY_POLAR_FORTRESS_LISTING_URL,
+  EBAY_SOMME_LISTING_URL,
   EBAY_STALINGRAD_LISTING_URL,
 } from '@/app/config';
 
-import WHSnowFortress from '../../assets/showcase/WH-snow-fortress.jpg';
-import WHSandCitadel from '../../assets/showcase/WH-sand-citadel.jpg';
-import WHArmageddon from '../../assets/showcase/WH-armageddon.jpg';
+import Crimea from '../../assets/showcase/crimea.jpg';
 import Napoleonic from '../../assets/showcase/napoleonic.jpg';
 import NorthAfrica from '../../assets/showcase/north-africa.jpg';
-import CivilWar from '../../assets/showcase/civil-war.jpg';
 import OilFields from '../../assets/showcase/oil-fields.jpg';
 import Jacobean from '../../assets/showcase/jacobean.jpg';
+import Somme from '../../assets/showcase/somme.jpg';
 import Stalingrad from '../../assets/showcase/stalingrad.jpg';
+
+import { FantasyShowcaseCarousel } from './FantasyShowcaseCarousel';
 
 type BuyNowImage = {
   src: string;
   alt: string;
   title: string;
   blurb?: string;
+  tag?: string;
   ebayUrl: string;
-  categoryTag?: string;
-};
-
-type ComingSoonImage = {
-  src: string;
-  alt: string;
-  title: string;
-  categoryTag?: string;
 };
 
 const buyNowItems: BuyNowImage[] = [
   {
-    src: Stalingrad,
-    alt: 'Stalingrad battle backdrop',
-    title: 'WW2 EASTERN FRONT',
-    ebayUrl: EBAY_STALINGRAD_LISTING_URL,
+    src: Somme,
+    alt: 'WW1 Western Front backdrop',
+    title: 'WW1 Western Front',
+    ebayUrl: EBAY_SOMME_LISTING_URL,
+  },
+  {
+    src: Crimea,
+    alt: 'Eastern Europe / Crimea backdrop',
+    title: 'Eastern Europe / Crimea',
+    ebayUrl: EBAY_CRIMEA_LISTING_URL,
   },
   {
     src: NorthAfrica,
     alt: 'North Africa backdrop',
     title: 'North Africa',
+    tag: 'Best seller',
     ebayUrl: EBAY_NORTH_AFRICA_LISTING_URL,
+  },
+  {
+    src: Stalingrad,
+    alt: 'Stalingrad battle backdrop',
+    title: 'WW2 EASTERN FRONT',
+    ebayUrl: EBAY_STALINGRAD_LISTING_URL,
   },
   {
     src: Jacobean,
@@ -74,34 +80,6 @@ const buyNowItems: BuyNowImage[] = [
     alt: 'Gulf War backdrop',
     title: 'GULF WAR',
     ebayUrl: EBAY_GULF_WAR_LISTING_URL,
-  },
-  {
-    src: WHSnowFortress,
-    alt: 'Polar fortress backdrop',
-    title: 'Polar Fortress',
-    categoryTag: 'Fantasy',
-    ebayUrl: EBAY_POLAR_FORTRESS_LISTING_URL,
-  },
-  {
-    src: WHSandCitadel,
-    alt: 'Desert citadel backdrop',
-    title: 'Desert Citadel',
-    categoryTag: 'Fantasy',
-    ebayUrl: EBAY_DESERT_CITADEL_LISTING_URL,
-  },
-];
-
-const comingSoonItems: ComingSoonImage[] = [
-  {
-    src: CivilWar,
-    alt: 'American Civil War backdrop',
-    title: 'Civil War',
-  },
-  {
-    src: WHArmageddon,
-    alt: 'Armageddon backdrop',
-    title: 'Armageddon',
-    categoryTag: 'Fantasy',
   },
 ];
 
@@ -163,9 +141,9 @@ export function ShowcaseGallery() {
 
                     <div className="absolute inset-x-0 bottom-0 px-6 pt-24 pb-6 md:px-12 md:pr-44 md:pt-28 md:pb-6 lg:px-20 lg:pr-48 lg:pt-24 bg-gradient-to-t from-black via-black/70 to-transparent">
                       <div className="max-w-3xl">
-                        {item.categoryTag ? (
-                          <span className="mb-2 inline-block rounded border border-white/25 bg-white/5 px-2 py-0.5 type-overline font-medium uppercase tracking-[0.2em] text-white/85">
-                            {item.categoryTag}
+                        {item.tag ? (
+                          <span className="mb-3 inline-block rounded bg-white px-2 py-0.5 type-overline font-medium uppercase tracking-[0.2em] text-black">
+                            {item.tag}
                           </span>
                         ) : null}
                         <h4 className="type-heading-prominent text-white uppercase tracking-[0.12em] font-light mb-3 break-words">
@@ -226,54 +204,7 @@ export function ShowcaseGallery() {
           </Carousel>
         </div>
 
-        <div>
-          <div className="max-w-3xl mb-6 md:mb-8">
-            <h3 className="type-heading-lg uppercase tracking-[0.2em] text-white font-light">
-              Upcoming backdrops
-            </h3>
-            <p className="mt-3 type-body text-gray-300 leading-relaxed">
-              Confirmed upcoming releases. Join the list for first availability alerts.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {comingSoonItems.map((item) => (
-              <article key={item.src} className="rounded-lg border border-white/10 overflow-hidden bg-black/20">
-                <div className="relative h-64 md:h-72">
-                  <ImageWithFallback
-                    src={item.src}
-                    alt={item.alt}
-                    className="w-full h-full object-cover object-center block"
-                  />
-                  <div className="absolute inset-x-0 bottom-0 px-4 pt-8 pb-4 bg-gradient-to-t from-black via-black/70 to-transparent md:px-5">
-                    {item.categoryTag ? (
-                      <span className="mb-2 inline-block rounded border border-white/25 bg-white/5 px-2 py-0.5 type-overline font-medium uppercase tracking-[0.2em] text-white/85">
-                        {item.categoryTag}
-                      </span>
-                    ) : null}
-                    <h4 className="type-title text-white uppercase tracking-[0.12em] font-light break-words">
-                      {item.title}
-                    </h4>
-                    <a
-                      href="#newsletter-signup"
-                      onClick={(event) => {
-                        event.preventDefault();
-                        document.getElementById('newsletter-signup')?.scrollIntoView({
-                          behavior: 'smooth',
-                          block: 'start',
-                        });
-                      }}
-                      className="mt-2 inline-flex items-center gap-2 type-control uppercase tracking-[0.18em] text-white border-b border-white/35 pb-1 hover:border-white transition-colors"
-                    >
-                      <span>Get alerts</span>
-                      <ArrowRight className="w-4 h-4" />
-                    </a>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
+        <FantasyShowcaseCarousel />
       </div>
     </section>
   );

@@ -1,5 +1,6 @@
 import { Hero } from '@/app/components/Hero';
 import { ShowcaseGallery } from '@/app/components/ShowcaseGallery';
+import { UpcomingBackdrops } from '@/app/components/UpcomingBackdrops';
 import { BackdropFormat } from '@/app/components/BackdropFormat';
 import { MaterialsAndVersatility } from '@/app/components/MaterialsAndVersatility';
 import { CollectionFooter } from '@/app/components/CollectionFooter';
@@ -11,6 +12,8 @@ export default function App() {
       <Hero />
 
       <ShowcaseGallery />
+
+      <UpcomingBackdrops />
 
       <BackdropFormat />
 
