@@ -4,17 +4,17 @@
 // CONTACT_EMAIL powers every secondary "Get in touch" mailto: link.
 export const EBAY_STORE_URL = 'https://ebay.us/m/VMkMEi';
 /** Jacobean backdrop listing on eBay. */
-export const EBAY_JACOBEAN_LISTING_URL = 'https://ebay.us/m/nbRdjW';
+export const EBAY_JACOBEAN_LISTING_URL = 'https://www.ebay.co.uk/itm/800030233150';
 /** Stalingrad backdrop listing on eBay. */
 export const EBAY_STALINGRAD_LISTING_URL = 'https://ebay.us/m/jA6xZv';
 /** Napoleonic backdrop listing on eBay. */
 export const EBAY_NAPOLEONIC_LISTING_URL = 'https://ebay.us/m/KC53Gt';
 /** Gulf War backdrop listing on eBay. */
-export const EBAY_GULF_WAR_LISTING_URL = 'https://ebay.us/m/BdbfPW';
+export const EBAY_GULF_WAR_LISTING_URL = 'https://www.ebay.co.uk/itm/389968854720';
 /** North Africa backdrop listing on eBay. */
-export const EBAY_NORTH_AFRICA_LISTING_URL = 'https://ebay.us/m/V5e4rq';
+export const EBAY_NORTH_AFRICA_LISTING_URL = 'https://www.ebay.co.uk/itm/800094034721';
 /** Polar Fortress backdrop listing on eBay. */
-export const EBAY_POLAR_FORTRESS_LISTING_URL = 'https://ebay.us/m/O61CV1';
+export const EBAY_POLAR_FORTRESS_LISTING_URL = 'https://www.ebay.co.uk/itm/389968713579';
 /** Desert Citadel backdrop listing on eBay. */
 export const EBAY_DESERT_CITADEL_LISTING_URL = 'https://ebay.us/m/MvMozv';
 /** WW1 Western Front (Somme) backdrop listing on eBay. */
