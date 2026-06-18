@@ -10,6 +10,7 @@ import {
 } from './ui/carousel';
 import {
   EBAY_CRIMEA_LISTING_URL,
+  EBAY_FRENCH_TOWN_LISTING_URL,
   EBAY_GULF_WAR_LISTING_URL,
   EBAY_JACOBEAN_LISTING_URL,
   EBAY_NORTH_AFRICA_LISTING_URL,
@@ -19,6 +20,7 @@ import {
 } from '@/app/config';
 
 import Crimea from '../../assets/showcase/crimea.jpg';
+import FrenchTown from '../../assets/showcase/french-town2.jpg';
 import Napoleonic from '../../assets/showcase/napoleonic.jpg';
 import NorthAfrica from '../../assets/showcase/north-africa.jpg';
 import OilFields from '../../assets/showcase/oil-fields.jpg';
@@ -38,6 +40,12 @@ type BuyNowImage = {
 };
 
 const buyNowItems: BuyNowImage[] = [
+  {
+    src: FrenchTown,
+    alt: 'WW1 / WW2 French Town backdrop',
+    title: 'WW1 / WW2 French Town',
+    ebayUrl: EBAY_FRENCH_TOWN_LISTING_URL,
+  },
   {
     src: Somme,
     alt: 'WW1 Western Front backdrop',

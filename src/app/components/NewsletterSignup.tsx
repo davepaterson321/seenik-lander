@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { FacebookLink } from '@/app/components/FacebookLink';
 
 interface NewsletterSignupProps {
   onEmailSubmit: (email: string) => void;
@@ -49,6 +50,10 @@ export function NewsletterSignup({ onEmailSubmit, isSubmitting }: NewsletterSign
             Unsubscribe any time. We will never share your email.
           </p>
         </form>
+
+        <div className="mt-10 flex justify-center">
+          <FacebookLink />
+        </div>
       </div>
     </section>
   );

@@ -21,6 +21,10 @@ export const EBAY_DESERT_CITADEL_LISTING_URL = 'https://ebay.us/m/MvMozv';
 export const EBAY_SOMME_LISTING_URL = 'https://www.ebay.co.uk/itm/800032689791';
 /** Eastern Europe / Crimea backdrop listing on eBay. */
 export const EBAY_CRIMEA_LISTING_URL = 'https://www.ebay.co.uk/itm/800031658636';
+/** French Town backdrop listing on eBay. */
+export const EBAY_FRENCH_TOWN_LISTING_URL = 'https://www.ebay.co.uk/itm/800204073072';
 export const CONTACT_EMAIL = 'hello@seenik.co.uk';
 
 export const CONTACT_MAILTO = `mailto:${CONTACT_EMAIL}`;
+export const FACEBOOK_URL =
+  'https://www.facebook.com/share/17nFX6qg2Y/?mibextid=wwXIfr';

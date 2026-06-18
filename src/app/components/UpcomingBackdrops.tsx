@@ -4,7 +4,6 @@ import { ImageWithFallback } from './figma/ImageWithFallback';
 
 import WHArmageddon from '../../assets/showcase/WH-armageddon.jpg';
 import CivilWar from '../../assets/showcase/civil-war.jpg';
-import FrenchTown from '../../assets/showcase/french-town2.jpg';
 import SouthAfrica from '../../assets/showcase/south-africa.jpg';
 
 type ComingSoonImage = {
@@ -20,11 +19,6 @@ const comingSoonItems: ComingSoonImage[] = [
     alt: 'Armageddon backdrop',
     title: 'Armageddon',
     categoryTag: 'Fantasy',
-  },
-  {
-    src: FrenchTown,
-    alt: 'French Town backdrop',
-    title: 'French Town',
   },
   {
     src: CivilWar,

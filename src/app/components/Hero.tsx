@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import Seenik from '@/imports/Seenik';
 import { ArrowRight, ArrowUpRight, Mail } from 'lucide-react';
 import heroBackground from '@/assets/hero-bg.jpg';
+import { FacebookLink } from '@/app/components/FacebookLink';
 import { CONTACT_MAILTO, EBAY_STORE_URL } from '@/app/config';
 
 interface HeroProps {
@@ -81,6 +82,7 @@ export function Hero({ videoSrc }: HeroProps) {
             <Mail className="w-4 h-4" />
             <span className="hidden sm:inline">Get in touch</span>
           </a>
+          <FacebookLink />
         </div>
       </div>
 
