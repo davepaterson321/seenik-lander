@@ -9,10 +9,12 @@ import {
   CarouselItem,
 } from './ui/carousel';
 import {
+  EBAY_ARMAGEDDON_LISTING_URL,
   EBAY_POLAR_FORTRESS_LISTING_URL,
   EBAY_DESERT_CITADEL_LISTING_URL,
 } from '@/app/config';
 
+import WHArmageddon from '../../assets/showcase/WH-armageddon.jpg';
 import WHSnowFortress from '../../assets/showcase/WH-snow-fortress.jpg';
 import WHSandCitadel from '../../assets/showcase/WH-sand-citadel.jpg';
 
@@ -24,6 +26,12 @@ type FantasyItem = {
 };
 
 const fantasyItems: FantasyItem[] = [
+  {
+    src: WHArmageddon,
+    alt: 'Hive World fantasy wargame backdrop',
+    title: 'Hive World',
+    ebayUrl: EBAY_ARMAGEDDON_LISTING_URL,
+  },
   {
     src: WHSnowFortress,
     alt: 'Polar Fortress fantasy wargame backdrop',

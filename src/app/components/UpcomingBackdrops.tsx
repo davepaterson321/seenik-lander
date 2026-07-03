@@ -2,7 +2,6 @@ import { ArrowRight } from 'lucide-react';
 
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
-import WHArmageddon from '../../assets/showcase/WH-armageddon.jpg';
 import CivilWar from '../../assets/showcase/civil-war.jpg';
 import SouthAfrica from '../../assets/showcase/south-africa.jpg';
 
@@ -14,12 +13,6 @@ type ComingSoonImage = {
 };
 
 const comingSoonItems: ComingSoonImage[] = [
-  {
-    src: WHArmageddon,
-    alt: 'Armageddon backdrop',
-    title: 'Armageddon',
-    categoryTag: 'Fantasy',
-  },
   {
     src: CivilWar,
     alt: 'American Civil War backdrop',
