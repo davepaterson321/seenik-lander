@@ -10,6 +10,7 @@ import {
 } from './ui/carousel';
 import {
   EBAY_CRIMEA_LISTING_URL,
+  EBAY_FALL_OF_BERLIN_LISTING_URL,
   EBAY_FRENCH_TOWN_LISTING_URL,
   EBAY_GULF_WAR_LISTING_URL,
   EBAY_JACOBEAN_LISTING_URL,
@@ -26,6 +27,7 @@ import NorthAfrica from '../../assets/showcase/north-africa.jpg';
 import OilFields from '../../assets/showcase/oil-fields.jpg';
 import Jacobean from '../../assets/showcase/jacobean.jpg';
 import Somme from '../../assets/showcase/somme.jpg';
+import FallOfBerlin from '../../assets/showcase/fall-of-berlin.jpg';
 import Stalingrad from '../../assets/showcase/stalingrad.jpg';
 
 import { FantasyShowcaseCarousel } from './FantasyShowcaseCarousel';
@@ -41,9 +43,16 @@ type BuyNowImage = {
 
 const buyNowItems: BuyNowImage[] = [
   {
+    src: FallOfBerlin,
+    alt: 'WW2 Fall of Berlin backdrop',
+    title: 'WW2 Fall of Berlin',
+    ebayUrl: EBAY_FALL_OF_BERLIN_LISTING_URL,
+  },
+  {
     src: FrenchTown,
     alt: 'WW1 / WW2 French Town backdrop',
     title: 'WW1 / WW2 French Town',
+    tag: 'Best seller',
     ebayUrl: EBAY_FRENCH_TOWN_LISTING_URL,
   },
   {
