@@ -22,7 +22,7 @@ export const EBAY_DESERT_CITADEL_LISTING_URL = 'https://ebay.us/m/MvMozv';
 /** Armageddon backdrop listing on eBay. */
 export const EBAY_ARMAGEDDON_LISTING_URL = 'https://ebay.io/m/1wsF98';
 /** WW1 Western Front (Somme) backdrop listing on eBay. */
-export const EBAY_SOMME_LISTING_URL = 'https://www.ebay.com/itm/800032689791';
+export const EBAY_SOMME_LISTING_URL = 'https://www.ebay.com/itm/800522722777';
 /** Eastern Europe / Crimea backdrop listing on eBay. */
 export const EBAY_CRIMEA_LISTING_URL = 'https://www.ebay.com/itm/800031658636';
 /** French Town backdrop listing on eBay. */
