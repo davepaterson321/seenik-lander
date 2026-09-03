@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import Seenik from '@/imports/Seenik';
 import { ArrowRight, ArrowUpRight, Mail } from 'lucide-react';
-import heroBackground from '@/assets/hero-bg.jpg';
+import heroBackground from '@/assets/displays-landing/hero-bg-somme.jpg';
 import { FacebookLink } from '@/app/components/FacebookLink';
 import { CONTACT_MAILTO, EBAY_STORE_URL } from '@/app/config';
 

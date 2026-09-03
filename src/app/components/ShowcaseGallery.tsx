@@ -9,27 +9,22 @@ import {
   CarouselItem,
 } from './ui/carousel';
 import {
-  EBAY_CRIMEA_LISTING_URL,
   EBAY_FALL_OF_BERLIN_LISTING_URL,
   EBAY_FRENCH_TOWN_LISTING_URL,
-  EBAY_GULF_WAR_LISTING_URL,
-  EBAY_JACOBEAN_LISTING_URL,
   EBAY_NORTH_AFRICA_LISTING_URL,
-  EBAY_NAPOLEONIC_LISTING_URL,
+  EBAY_PACIFIC_LISTING_URL,
   EBAY_SOMME_LISTING_URL,
   EBAY_STALINGRAD_LISTING_URL,
 } from '@/app/config';
 
-import Crimea from '../../assets/showcase/crimea.jpg';
-import FrenchTown from '../../assets/showcase/french-town2.jpg';
-import Napoleonic from '../../assets/showcase/napoleonic.jpg';
 import NorthAfrica from '../../assets/showcase/north-africa.jpg';
-import OilFields from '../../assets/showcase/oil-fields.jpg';
-import Jacobean from '../../assets/showcase/jacobean.jpg';
+import FrenchTown from '../../assets/showcase/french-town2.jpg';
 import Somme from '../../assets/showcase/somme.jpg';
 import FallOfBerlin from '../../assets/showcase/fall-of-berlin.jpg';
+import Pacific from '../../assets/showcase/pacific.jpg';
 import Stalingrad from '../../assets/showcase/stalingrad.jpg';
 
+import { DiscoverTheRangeCarousel } from './DiscoverTheRangeCarousel';
 import { FantasyShowcaseCarousel } from './FantasyShowcaseCarousel';
 
 type BuyNowImage = {
@@ -42,6 +37,12 @@ type BuyNowImage = {
 };
 
 const buyNowItems: BuyNowImage[] = [
+  {
+    src: Pacific,
+    alt: 'WW2 Pacific backdrop',
+    title: 'WW2 Pacific',
+    ebayUrl: EBAY_PACIFIC_LISTING_URL,
+  },
   {
     src: FallOfBerlin,
     alt: 'WW2 Fall of Berlin backdrop',
@@ -62,10 +63,10 @@ const buyNowItems: BuyNowImage[] = [
     ebayUrl: EBAY_SOMME_LISTING_URL,
   },
   {
-    src: Crimea,
-    alt: 'Eastern Europe / Crimea backdrop',
-    title: 'Eastern Europe / Crimea',
-    ebayUrl: EBAY_CRIMEA_LISTING_URL,
+    src: Stalingrad,
+    alt: 'Stalingrad battle backdrop',
+    title: 'WW2 EASTERN FRONT',
+    ebayUrl: EBAY_STALINGRAD_LISTING_URL,
   },
   {
     src: NorthAfrica,
@@ -73,30 +74,6 @@ const buyNowItems: BuyNowImage[] = [
     title: 'North Africa',
     tag: 'Best seller',
     ebayUrl: EBAY_NORTH_AFRICA_LISTING_URL,
-  },
-  {
-    src: Stalingrad,
-    alt: 'Stalingrad battle backdrop',
-    title: 'WW2 EASTERN FRONT',
-    ebayUrl: EBAY_STALINGRAD_LISTING_URL,
-  },
-  {
-    src: Jacobean,
-    alt: 'Jacobean battle backdrop',
-    title: 'Jacobean / ECW',
-    ebayUrl: EBAY_JACOBEAN_LISTING_URL,
-  },
-  {
-    src: Napoleonic,
-    alt: 'Napoleonic backdrop',
-    title: 'Napoleonic',
-    ebayUrl: EBAY_NAPOLEONIC_LISTING_URL,
-  },
-  {
-    src: OilFields,
-    alt: 'Gulf War backdrop',
-    title: 'GULF WAR',
-    ebayUrl: EBAY_GULF_WAR_LISTING_URL,
   },
 ];
 
@@ -133,7 +110,7 @@ export function ShowcaseGallery() {
         <div className="mb-14 md:mb-16">
           <div className="mb-5 md:mb-7 text-center">
             <h3 className="type-heading-lg uppercase tracking-[0.2em] text-white font-light">
-              Shop in-stock backdrops
+              Shop World War Backdrops
             </h3>
             <p className="mt-3 type-body text-gray-300 tracking-wide">
               Available to purchase securely today through our eBay listings.
@@ -143,7 +120,7 @@ export function ShowcaseGallery() {
           <Carousel
             opts={{ loop: buyNowItems.length > 1, align: 'start' }}
             setApi={setCarouselApi}
-            aria-label="In-stock backdrop listings"
+            aria-label="World War in-stock backdrop listings"
             className="w-full"
           >
             <CarouselContent className="ml-0">
@@ -221,6 +198,7 @@ export function ShowcaseGallery() {
           </Carousel>
         </div>
 
+        <DiscoverTheRangeCarousel />
         <FantasyShowcaseCarousel />
       </div>
     </section>

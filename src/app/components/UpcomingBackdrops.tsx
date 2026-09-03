@@ -29,15 +29,15 @@ export function UpcomingBackdrops() {
   return (
     <section
       aria-label="Upcoming backdrops"
-      className="bg-[#0B0B0B] py-10 md:py-14 px-4 md:px-8 lg:px-10"
+      className="bg-black py-10 md:py-14 px-4 md:px-8 lg:px-10"
     >
       <div className="max-w-[1500px] mx-auto">
         <div className="max-w-3xl mb-6 md:mb-8">
           <h3 className="type-heading-lg uppercase tracking-[0.2em] text-white font-light">
-            Upcoming backdrops
+            Upcoming releases
           </h3>
           <p className="mt-3 type-body text-gray-300 leading-relaxed">
-            Confirmed upcoming releases. Join the list for first availability alerts.
+            Join our mailing list for first availability alerts
           </p>
         </div>
 

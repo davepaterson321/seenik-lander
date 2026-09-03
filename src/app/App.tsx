@@ -13,11 +13,11 @@ export default function App() {
 
       <ShowcaseGallery />
 
-      <UpcomingBackdrops />
-
       <BackdropFormat />
 
       <MaterialsAndVersatility />
+
+      <UpcomingBackdrops />
 
       <CollectionFooter />
       <EmailCaptureSection />

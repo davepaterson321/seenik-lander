@@ -1,13 +1,13 @@
 export function MaterialsAndVersatility() {
   return (
-    <section className="bg-black px-4 md:px-8 lg:px-10 pb-20 md:pb-24">
+    <section className="bg-[#020202] px-4 md:px-8 lg:px-10 pb-20 md:pb-24">
       <div className="max-w-[1500px] mx-auto">
         <span className="block type-overline uppercase tracking-[0.3em] text-white/50">
           Product details
         </span>
 
         <div className="mt-8 md:mt-10 grid grid-cols-1 gap-6 md:gap-8 md:grid-cols-3">
-          <div className="rounded-lg border border-white/10 p-5 sm:px-6 sm:py-8">
+          <div className="border border-white/10 p-5 sm:px-6 sm:py-8 shadow-[0_0_28px_rgba(255,255,255,0.05)] transition-all duration-300 hover:border-white/25 hover:shadow-[0_0_40px_rgba(255,255,255,0.12)]">
             <h3 className="type-heading text-white uppercase tracking-[0.1em] font-light mb-4 leading-tight">
               Unrivalled quality
             </h3>
@@ -16,7 +16,7 @@ export function MaterialsAndVersatility() {
             </p>
           </div>
 
-          <div className="rounded-lg border border-white/10 p-5 sm:px-6 sm:py-8">
+          <div className="border border-white/10 p-5 sm:px-6 sm:py-8 shadow-[0_0_28px_rgba(255,255,255,0.05)] transition-all duration-300 hover:border-white/25 hover:shadow-[0_0_40px_rgba(255,255,255,0.12)]">
             <h3 className="type-heading text-white uppercase tracking-[0.1em] font-light mb-4 leading-tight">
               Flexible display fit
             </h3>
@@ -25,7 +25,7 @@ export function MaterialsAndVersatility() {
             </p>
           </div>
 
-          <div className="rounded-lg border border-white/10 p-5 sm:px-6 sm:py-8">
+          <div className="border border-white/10 p-5 sm:px-6 sm:py-8 shadow-[0_0_28px_rgba(255,255,255,0.05)] transition-all duration-300 hover:border-white/25 hover:shadow-[0_0_40px_rgba(255,255,255,0.12)]">
             <h3 className="type-heading text-white uppercase tracking-[0.1em] font-light mb-4 leading-tight">
               Scale compatibility
             </h3>

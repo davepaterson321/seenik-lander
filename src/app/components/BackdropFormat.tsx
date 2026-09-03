@@ -2,7 +2,7 @@ import ShowcaseBackdrop2 from '../../assets/showcase/showcase-backdrop-2.png';
 
 export function BackdropFormat() {
   return (
-    <section className="relative py-20 md:py-24 px-4 md:px-8 lg:px-10 bg-black overflow-hidden">
+    <section className="relative py-20 md:py-24 px-4 md:px-8 lg:px-10 bg-[#020202] overflow-hidden">
       <div className="max-w-[1500px] mx-auto">
         <div className="max-w-4xl mb-10 md:mb-12">
           <span className="block type-overline uppercase tracking-[0.3em] text-white/50 mb-4">

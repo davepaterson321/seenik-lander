@@ -9,6 +9,8 @@ export const EBAY_JACOBEAN_LISTING_URL = 'https://www.ebay.com/itm/800030233150'
 export const EBAY_STALINGRAD_LISTING_URL = 'https://ebay.us/m/jA6xZv';
 /** WW2 Fall of Berlin backdrop listing on eBay. */
 export const EBAY_FALL_OF_BERLIN_LISTING_URL = 'https://www.ebay.com/itm/800513363945';
+/** WW2 Pacific backdrop listing on eBay. */
+export const EBAY_PACIFIC_LISTING_URL = 'https://www.ebay.com/itm/800608026415';
 /** Napoleonic backdrop listing on eBay. */
 export const EBAY_NAPOLEONIC_LISTING_URL = 'https://ebay.us/m/KC53Gt';
 /** Gulf War backdrop listing on eBay. */
