@@ -28,7 +28,7 @@ export const EBAY_SOMME_LISTING_URL = 'https://www.ebay.com/itm/800522722777';
 /** Eastern Europe / Crimea backdrop listing on eBay. */
 export const EBAY_CRIMEA_LISTING_URL = 'https://www.ebay.com/itm/800031658636';
 /** French Town backdrop listing on eBay. */
-export const EBAY_FRENCH_TOWN_LISTING_URL = 'https://www.ebay.com/itm/800204073072';
+export const EBAY_FRENCH_TOWN_LISTING_URL = 'https://www.ebay.com/itm/800656880838';
 export const CONTACT_EMAIL = 'hello@seenik.co.uk';
 
 export const CONTACT_MAILTO = `mailto:${CONTACT_EMAIL}`;
