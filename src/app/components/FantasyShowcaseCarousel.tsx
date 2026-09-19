@@ -35,6 +35,7 @@ const fantasyItems: FantasyItem[] = [
     alt: 'Hive World fantasy wargame backdrop',
     title: 'Hive World',
     ebayUrl: EBAY_ARMAGEDDON_LISTING_URL,
+    inStock: false,
   },
   {
     src: WHSnowFortress,
