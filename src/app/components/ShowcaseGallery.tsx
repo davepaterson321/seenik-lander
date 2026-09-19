@@ -132,8 +132,6 @@ export function ShowcaseGallery() {
               {buyNowItems.map((item) => (
                 <CarouselItem key={item.src} className="pl-0 basis-full">
                   <div className="relative w-full h-[24rem] sm:h-[28rem] md:h-[34rem] lg:h-[40rem] xl:h-[44rem]">
-                    {item.inStock === false && <StockBadge />}
-
                     <ImageWithFallback
                       src={item.src}
                       alt={item.alt}
@@ -145,10 +143,11 @@ export function ShowcaseGallery() {
                     <div className="absolute inset-x-0 bottom-0 px-6 pt-24 pb-6 md:px-12 md:pr-44 md:pt-28 md:pb-6 lg:px-20 lg:pr-48 lg:pt-24 bg-gradient-to-t from-black via-black/70 to-transparent">
                       <div className="max-w-3xl">
                         {item.tag ? (
-                          <span className="mb-3 inline-block rounded bg-white px-2 py-0.5 type-overline font-medium uppercase tracking-[0.2em] text-black">
+                          <span className="mb-3 mr-2 inline-block rounded bg-white px-2 py-0.5 type-overline font-medium uppercase tracking-[0.2em] text-black">
                             {item.tag}
                           </span>
                         ) : null}
+                        {item.inStock === false && <StockBadge />}
                         <h4 className="type-heading-prominent text-white uppercase tracking-[0.12em] font-light mb-3 break-words">
                           {item.title}
                         </h4>
