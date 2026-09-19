@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { ArrowLeft, ArrowRight, ArrowUpRight } from 'lucide-react';
 
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import { StockBadge } from './StockBadge';
 import {
   type CarouselApi,
   Carousel,
@@ -34,6 +35,9 @@ type BuyNowImage = {
   blurb?: string;
   tag?: string;
   ebayUrl: string;
+  // Omit or set true while the listing is purchasable; set false to show
+  // a "Stock coming soon" tag in place of the eBay link.
+  inStock?: boolean;
 };
 
 const buyNowItems: BuyNowImage[] = [
@@ -61,6 +65,7 @@ const buyNowItems: BuyNowImage[] = [
     alt: 'WW1 Western Front backdrop',
     title: 'WW1 Western Front',
     ebayUrl: EBAY_SOMME_LISTING_URL,
+    inStock: false,
   },
   {
     src: Stalingrad,
@@ -127,10 +132,14 @@ export function ShowcaseGallery() {
               {buyNowItems.map((item) => (
                 <CarouselItem key={item.src} className="pl-0 basis-full">
                   <div className="relative w-full h-[24rem] sm:h-[28rem] md:h-[34rem] lg:h-[40rem] xl:h-[44rem]">
+                    {item.inStock === false && <StockBadge />}
+
                     <ImageWithFallback
                       src={item.src}
                       alt={item.alt}
-                      className="w-full h-full object-cover object-center block"
+                      className={`w-full h-full object-cover object-center block ${
+                        item.inStock === false ? 'grayscale opacity-60' : ''
+                      }`}
                     />
 
                     <div className="absolute inset-x-0 bottom-0 px-6 pt-24 pb-6 md:px-12 md:pr-44 md:pt-28 md:pb-6 lg:px-20 lg:pr-48 lg:pt-24 bg-gradient-to-t from-black via-black/70 to-transparent">
@@ -148,15 +157,21 @@ export function ShowcaseGallery() {
                             {item.blurb}
                           </p>
                         ) : null}
-                        <a
-                          href={item.ebayUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 type-control uppercase tracking-[0.2em] text-white border-b border-white/40 pb-1 hover:border-white transition-colors"
-                        >
-                          <span>View on eBay</span>
-                          <ArrowUpRight className="w-4 h-4" />
-                        </a>
+                        {item.inStock === false ? (
+                          <span className="inline-flex items-center gap-2 type-control uppercase tracking-[0.2em] text-white/60">
+                            Stock coming soon
+                          </span>
+                        ) : (
+                          <a
+                            href={item.ebayUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 type-control uppercase tracking-[0.2em] text-white border-b border-white/40 pb-1 hover:border-white transition-colors"
+                          >
+                            <span>View on eBay</span>
+                            <ArrowUpRight className="w-4 h-4" />
+                          </a>
+                        )}
                       </div>
                     </div>
                   </div>

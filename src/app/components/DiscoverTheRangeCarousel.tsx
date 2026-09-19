@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { ArrowLeft, ArrowRight, ArrowUpRight } from 'lucide-react';
 
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import { StockBadge } from './StockBadge';
 import {
   type CarouselApi,
   Carousel,
@@ -25,6 +26,9 @@ type DiscoverItem = {
   alt: string;
   title: string;
   ebayUrl: string;
+  // Omit or set true while the listing is purchasable; set false to show
+  // a "Stock coming soon" tag in place of the eBay link.
+  inStock?: boolean;
 };
 
 const discoverItems: DiscoverItem[] = [
@@ -104,25 +108,35 @@ export function DiscoverTheRangeCarousel() {
               className="pl-0 pr-4 basis-[88%] md:basis-1/2"
             >
               <div className="relative w-full h-64 md:h-80 rounded-lg overflow-hidden">
+                {item.inStock === false && <StockBadge />}
+
                 <ImageWithFallback
                   src={item.src}
                   alt={item.alt}
-                  className="w-full h-full object-cover object-center block"
+                  className={`w-full h-full object-cover object-center block ${
+                    item.inStock === false ? 'grayscale opacity-60' : ''
+                  }`}
                 />
 
                 <div className="absolute inset-x-0 bottom-0 px-5 pt-16 pb-5 bg-gradient-to-t from-black via-black/70 to-transparent">
                   <h4 className="type-heading text-white uppercase tracking-[0.12em] font-light mb-3 break-words">
                     {item.title}
                   </h4>
-                  <a
-                    href={item.ebayUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 type-control uppercase tracking-[0.2em] text-white border-b border-white/40 pb-1 hover:border-white transition-colors"
-                  >
-                    <span>View on eBay</span>
-                    <ArrowUpRight className="w-4 h-4" />
-                  </a>
+                  {item.inStock === false ? (
+                    <span className="inline-flex items-center gap-2 type-control uppercase tracking-[0.2em] text-white/60">
+                      Stock coming soon
+                    </span>
+                  ) : (
+                    <a
+                      href={item.ebayUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 type-control uppercase tracking-[0.2em] text-white border-b border-white/40 pb-1 hover:border-white transition-colors"
+                    >
+                      <span>View on eBay</span>
+                      <ArrowUpRight className="w-4 h-4" />
+                    </a>
+                  )}
                 </div>
               </div>
             </CarouselItem>
