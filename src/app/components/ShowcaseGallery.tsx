@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { ArrowLeft, ArrowRight, ArrowUpRight } from 'lucide-react';
 
 import { ImageWithFallback } from './figma/ImageWithFallback';
-import { StockBadge } from './StockBadge';
 import {
   type CarouselApi,
   Carousel,
@@ -143,11 +142,10 @@ export function ShowcaseGallery() {
                     <div className="absolute inset-x-0 bottom-0 px-6 pt-24 pb-6 md:px-12 md:pr-44 md:pt-28 md:pb-6 lg:px-20 lg:pr-48 lg:pt-24 bg-gradient-to-t from-black via-black/70 to-transparent">
                       <div className="max-w-3xl">
                         {item.tag ? (
-                          <span className="mb-3 mr-2 inline-block rounded bg-white px-2 py-0.5 type-overline font-medium uppercase tracking-[0.2em] text-black">
+                          <span className="mb-3 inline-block rounded bg-white px-2 py-0.5 type-overline font-medium uppercase tracking-[0.2em] text-black">
                             {item.tag}
                           </span>
                         ) : null}
-                        {item.inStock === false && <StockBadge />}
                         <h4 className="type-heading-prominent text-white uppercase tracking-[0.12em] font-light mb-3 break-words">
                           {item.title}
                         </h4>

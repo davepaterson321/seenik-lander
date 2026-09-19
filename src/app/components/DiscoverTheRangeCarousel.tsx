@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { ArrowLeft, ArrowRight, ArrowUpRight } from 'lucide-react';
 
 import { ImageWithFallback } from './figma/ImageWithFallback';
-import { StockBadge } from './StockBadge';
 import {
   type CarouselApi,
   Carousel,
@@ -117,7 +116,6 @@ export function DiscoverTheRangeCarousel() {
                 />
 
                 <div className="absolute inset-x-0 bottom-0 px-5 pt-16 pb-5 bg-gradient-to-t from-black via-black/70 to-transparent">
-                  {item.inStock === false && <StockBadge />}
                   <h4 className="type-heading text-white uppercase tracking-[0.12em] font-light mb-3 break-words">
                     {item.title}
                   </h4>
