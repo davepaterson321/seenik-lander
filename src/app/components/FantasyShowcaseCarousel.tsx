@@ -101,8 +101,6 @@ export function FantasyShowcaseCarousel() {
               className="pl-0 pr-4 basis-[88%] md:basis-1/2"
             >
               <div className="relative w-full h-64 md:h-80 rounded-lg overflow-hidden">
-                {item.inStock === false && <StockBadge />}
-
                 <ImageWithFallback
                   src={item.src}
                   alt={item.alt}
@@ -112,6 +110,7 @@ export function FantasyShowcaseCarousel() {
                 />
 
                 <div className="absolute inset-x-0 bottom-0 px-5 pt-16 pb-5 bg-gradient-to-t from-black via-black/70 to-transparent">
+                  {item.inStock === false && <StockBadge />}
                   <h4 className="type-heading text-white uppercase tracking-[0.12em] font-light mb-3 break-words">
                     {item.title}
                   </h4>
