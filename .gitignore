@@ -1,0 +1,14 @@
+# Dependencies and build output (CI runs `npm ci` and `npm run build` on deploy)
+node_modules/
+dist/
+
+# OS and editor noise
+.DS_Store
+
+# Logs and local environment files
+*.log
+.env
+.env.*
+
+# Local Claude Code permissions (launch.json can still be committed)
+.claude/settings.local.json
