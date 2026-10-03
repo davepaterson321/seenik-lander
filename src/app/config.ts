@@ -33,7 +33,7 @@ export const CONTACT_EMAIL = 'hello@seenik.co.uk';
 
 export const CONTACT_MAILTO = `mailto:${CONTACT_EMAIL}`;
 export const FACEBOOK_URL =
-  'https://www.facebook.com/share/17nFX6qg2Y/?mibextid=wwXIfr';
+  'https://www.facebook.com/people/Seenik-Premium-Backdrops/61590597695045/';
 export const INSTAGRAM_URL = 'https://www.instagram.com/seenikofficial';
 
 /**
