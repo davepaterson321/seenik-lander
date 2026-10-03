@@ -64,7 +64,6 @@ const buyNowItems: BuyNowImage[] = [
     alt: 'WW1 Western Front backdrop',
     title: 'WW1 Western Front',
     ebayUrl: EBAY_SOMME_LISTING_URL,
-    inStock: false,
   },
   {
     src: Stalingrad,
