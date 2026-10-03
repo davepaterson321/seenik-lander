@@ -2,7 +2,7 @@ import { createRoot } from 'react-dom/client';
 import { EBAY_STORE_URL } from '@/app/config';
 import { BrandTopBar } from '@/app/components/BrandTopBar';
 import { CollectionFooter } from '@/app/components/CollectionFooter';
-import { EmailCaptureSection } from '@/app/components/EmailCaptureSection';
+import { SiteFooter } from '@/app/components/SiteFooter';
 import { LandingSplitSection } from '@/app/components/LandingSplitSection';
 import cabinetView from '@/assets/displays-landing/cabinet-view.png';
 import jacobean from '@/assets/displays-landing/jacobean.jpg';
@@ -24,7 +24,7 @@ function DisplaysLandingPage() {
         </div>
 
         <div className="relative z-10">
-          <BrandTopBar />
+          <BrandTopBar breadcrumbs={[{ label: 'Collectors’ displays' }]} />
           <div className="max-w-[1500px] mx-auto px-4 md:px-8 lg:px-10 pt-12 pb-20 md:pt-16 md:pb-24">
             <span className="block type-overline uppercase tracking-[0.3em] text-white/60 mb-4">
               Cabinets and shelves
@@ -103,7 +103,7 @@ function DisplaysLandingPage() {
       </section>
 
       <CollectionFooter />
-      <EmailCaptureSection />
+      <SiteFooter />
     </main>
   );
 }

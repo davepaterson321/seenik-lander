@@ -33,4 +33,20 @@ export const CONTACT_EMAIL = 'hello@seenik.co.uk';
 
 export const CONTACT_MAILTO = `mailto:${CONTACT_EMAIL}`;
 export const FACEBOOK_URL =
-  'https://www.facebook.com/share/17nFX6qg2Y/?mibextid=wwXIfr';
+  'https://www.facebook.com/people/Seenik-Premium-Backdrops/61590597695045/';
+export const INSTAGRAM_URL = 'https://www.instagram.com/seenikofficial';
+
+/**
+ * Primary site navigation. `desktop: false` items only appear in the mobile menu:
+ * on desktop, Home is reached via the logo and the breadcrumb.
+ */
+export const MAIN_NAV_ITEMS = [
+  { label: 'Home', href: '/', desktop: false },
+  { label: 'About', href: '/about.html', desktop: true },
+] as const;
+
+/** SEO landing pages: kept out of the main nav, linked from the footer instead. */
+export const FOOTER_NAV_ITEMS = [
+  { label: 'Collectors’ displays', href: '/displays-backdrops.html' },
+  { label: 'Tabletop gaming', href: '/tabletop-gaming-backdrops.html' },
+] as const;
