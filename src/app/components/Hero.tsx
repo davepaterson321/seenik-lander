@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
 import Seenik from '@/imports/Seenik';
-import { ArrowRight, ArrowUpRight, Mail } from 'lucide-react';
+import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import heroBackground from '@/assets/displays-landing/hero-bg-somme.jpg';
-import { FacebookLink } from '@/app/components/FacebookLink';
-import { CONTACT_MAILTO, EBAY_STORE_URL } from '@/app/config';
+import { TopBarActions } from '@/app/components/TopBarActions';
+import { SiteNav } from '@/app/components/SiteNav';
+import { EBAY_STORE_URL } from '@/app/config';
 
 interface HeroProps {
   // Optional video source for a future cinematic background swap.
@@ -68,21 +69,19 @@ export function Hero({ videoSrc }: HeroProps) {
           <Seenik />
         </div>
 
+        <SiteNav
+          className={`ml-auto mr-6 transition-opacity duration-[1200ms] ${
+            isLoaded ? 'opacity-100' : 'opacity-0'
+          }`}
+        />
+
         <div
           className={`flex items-center gap-2 sm:gap-3 flex-shrink-0 transition-opacity duration-[1200ms] ${
             isLoaded ? 'opacity-100' : 'opacity-0'
           }`}
           style={{ transitionDelay: '500ms' }}
         >
-          <a
-            href={CONTACT_MAILTO}
-            className="inline-flex items-center gap-2 px-4 sm:px-5 py-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 transition-colors tracking-wide"
-            aria-label="Get in touch by email"
-          >
-            <Mail className="w-4 h-4" />
-            <span className="hidden sm:inline">Get in touch</span>
-          </a>
-          <FacebookLink />
+          <TopBarActions />
         </div>
       </div>
 

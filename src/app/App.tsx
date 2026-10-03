@@ -4,7 +4,7 @@ import { UpcomingBackdrops } from '@/app/components/UpcomingBackdrops';
 import { BackdropFormat } from '@/app/components/BackdropFormat';
 import { MaterialsAndVersatility } from '@/app/components/MaterialsAndVersatility';
 import { CollectionFooter } from '@/app/components/CollectionFooter';
-import { EmailCaptureSection } from '@/app/components/EmailCaptureSection';
+import { SiteFooter } from '@/app/components/SiteFooter';
 
 export default function App() {
   return (
@@ -20,7 +20,7 @@ export default function App() {
       <UpcomingBackdrops />
 
       <CollectionFooter />
-      <EmailCaptureSection />
+      <SiteFooter />
     </div>
   );
 }

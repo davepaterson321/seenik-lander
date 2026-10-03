@@ -2,7 +2,7 @@ import { createRoot } from 'react-dom/client';
 import { EBAY_STORE_URL } from '@/app/config';
 import { BrandTopBar } from '@/app/components/BrandTopBar';
 import { CollectionFooter } from '@/app/components/CollectionFooter';
-import { EmailCaptureSection } from '@/app/components/EmailCaptureSection';
+import { SiteFooter } from '@/app/components/SiteFooter';
 import { LandingSplitSection } from '@/app/components/LandingSplitSection';
 import sandCitadel from '@/assets/showcase/WH-sand-citadel.jpg';
 import gamingDice from '@/assets/tabletop-landing/gaming-dice.jpeg';
@@ -25,7 +25,7 @@ function TabletopGamingLandingPage() {
         </div>
 
         <div className="relative z-10">
-          <BrandTopBar />
+          <BrandTopBar breadcrumbs={[{ label: 'Tabletop gaming' }]} />
           <div className="max-w-[1500px] mx-auto px-4 md:px-8 lg:px-10 pt-12 pb-20 md:pt-16 md:pb-24">
             <span className="block type-overline uppercase tracking-[0.3em] text-white/60 mb-4">
               Tabletop gaming
@@ -110,7 +110,7 @@ function TabletopGamingLandingPage() {
       </section>
 
       <CollectionFooter />
-      <EmailCaptureSection />
+      <SiteFooter />
     </main>
   );
 }

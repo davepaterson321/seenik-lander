@@ -22,6 +22,7 @@ export default defineConfig({
         notFound: path.resolve(__dirname, '404.html'),
         displaysBackdrops: path.resolve(__dirname, 'displays-backdrops.html'),
         tabletopGamingBackdrops: path.resolve(__dirname, 'tabletop-gaming-backdrops.html'),
+        about: path.resolve(__dirname, 'about.html'),
       },
     },
   },
