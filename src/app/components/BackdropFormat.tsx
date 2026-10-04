@@ -1,4 +1,4 @@
-import ShowcaseBackdrop2 from '../../assets/showcase/showcase-backdrop-2.png';
+import ShowcaseBackdrop2 from '../../assets/showcase/showcase-backdrop-2.jpg';
 
 export function BackdropFormat() {
   return (

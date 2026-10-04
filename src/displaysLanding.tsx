@@ -4,7 +4,7 @@ import { BrandTopBar } from '@/app/components/BrandTopBar';
 import { CollectionFooter } from '@/app/components/CollectionFooter';
 import { SiteFooter } from '@/app/components/SiteFooter';
 import { LandingSplitSection } from '@/app/components/LandingSplitSection';
-import cabinetView from '@/assets/displays-landing/cabinet-view.png';
+import cabinetView from '@/assets/displays-landing/cabinet-view.jpg';
 import jacobean from '@/assets/displays-landing/jacobean.jpg';
 import oilFields from '@/assets/displays-landing/oil-fields.jpg';
 import heroBackground from '@/assets/hero-bg.jpg';

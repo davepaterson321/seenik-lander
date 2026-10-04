@@ -1,5 +1,5 @@
 import { ArrowUpRight } from 'lucide-react';
-import backgroundImage from '@/assets/a2bbdec426a5ce1f0c6c9ad0cf0a77b1db430c76.png';
+import backgroundImage from '@/assets/a2bbdec426a5ce1f0c6c9ad0cf0a77b1db430c76.jpg';
 import { CONTACT_MAILTO, EBAY_STORE_URL } from '@/app/config';
 
 export function CollectionFooter() {
