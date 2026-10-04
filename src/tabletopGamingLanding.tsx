@@ -56,7 +56,7 @@ function TabletopGamingLandingPage() {
                 }}
                 className="inline-flex items-center justify-center px-8 py-4 border border-white/25 text-white hover:bg-white/10 transition-colors tracking-wide"
               >
-                Get alerts
+                New release alerts
               </a>
             </div>
           </div>

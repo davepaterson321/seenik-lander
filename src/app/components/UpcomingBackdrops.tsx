@@ -68,9 +68,10 @@ export function UpcomingBackdrops() {
                         block: 'start',
                       });
                     }}
+                    aria-label={`Get notified when ${item.title} is available`}
                     className="mt-2 inline-flex items-center gap-2 type-control uppercase tracking-[0.18em] text-white border-b border-white/35 pb-1 hover:border-white transition-colors"
                   >
-                    <span>Get alerts</span>
+                    <span>Notify me</span>
                     <ArrowRight className="w-4 h-4" />
                   </a>
                 </div>

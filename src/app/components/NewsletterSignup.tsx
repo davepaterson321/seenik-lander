@@ -5,7 +5,7 @@ interface NewsletterSignupProps {
   isSubmitting: boolean;
 }
 
-/** Sign-up card, designed to sit in the site footer. Target of the "Get alerts" buttons. */
+/** Sign-up card, designed to sit in the site footer. Target of the "Notify me" and "New release alerts" buttons. */
 export function NewsletterSignup({ onEmailSubmit, isSubmitting }: NewsletterSignupProps) {
   const [email, setEmail] = useState('');
 
