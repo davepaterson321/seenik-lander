@@ -29,6 +29,14 @@ export const EBAY_SOMME_LISTING_URL = 'https://www.ebay.com/itm/800752443386';
 export const EBAY_CRIMEA_LISTING_URL = 'https://www.ebay.com/itm/800031658636';
 /** French Town backdrop listing on eBay. */
 export const EBAY_FRENCH_TOWN_LISTING_URL = 'https://www.ebay.com/itm/800656880838';
+/**
+ * MailerLite "Website sign-up (seenik.co.uk)" embedded form. We post to its
+ * subscribe address directly (no MailerLite script on the site), which keeps the
+ * site free of third-party scripts and cookies.
+ */
+export const MAILERLITE_SUBSCRIBE_URL =
+  'https://assets.mailerlite.com/jsonp/2577934/forms/200400197850760635/subscribe';
+export const PRIVACY_POLICY_URL = '/privacy.html';
 export const CONTACT_EMAIL = 'hello@seenik.co.uk';
 
 export const CONTACT_MAILTO = `mailto:${CONTACT_EMAIL}`;
@@ -49,4 +57,5 @@ export const MAIN_NAV_ITEMS = [
 export const FOOTER_NAV_ITEMS = [
   { label: 'Collectors’ displays', href: '/displays-backdrops.html' },
   { label: 'Tabletop gaming', href: '/tabletop-gaming-backdrops.html' },
+  { label: 'Privacy policy', href: PRIVACY_POLICY_URL },
 ] as const;

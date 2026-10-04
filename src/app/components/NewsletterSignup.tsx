@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { PRIVACY_POLICY_URL } from '@/app/config';
 
 interface NewsletterSignupProps {
   onEmailSubmit: (email: string) => void;
@@ -8,9 +9,15 @@ interface NewsletterSignupProps {
 /** Sign-up card, designed to sit in the site footer. Target of the "Notify me" and "New release alerts" buttons. */
 export function NewsletterSignup({ onEmailSubmit, isSubmitting }: NewsletterSignupProps) {
   const [email, setEmail] = useState('');
+  const [trap, setTrap] = useState('');
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    // Hidden field only bots fill in: drop the submission without telling them.
+    if (trap) {
+      setEmail('');
+      return;
+    }
     if (email) {
       onEmailSubmit(email);
       setEmail('');
@@ -35,6 +42,16 @@ export function NewsletterSignup({ onEmailSubmit, isSubmitting }: NewsletterSign
             required
             className="w-full px-4 py-3 type-field bg-[#F7F7F7] border border-black/50 text-black placeholder:text-black/60 focus:outline-none focus:border-black transition-colors"
           />
+          <input
+            type="text"
+            name="company"
+            value={trap}
+            onChange={(e) => setTrap(e.target.value)}
+            tabIndex={-1}
+            autoComplete="off"
+            aria-hidden="true"
+            className="absolute left-[-9999px] h-0 w-0 opacity-0"
+          />
           <button
             type="submit"
             disabled={isSubmitting}
@@ -45,7 +62,11 @@ export function NewsletterSignup({ onEmailSubmit, isSubmitting }: NewsletterSign
         </div>
 
         <p className="mt-4 type-body text-black/60 leading-relaxed">
-          Unsubscribe at any time. We never share your data.
+          We&rsquo;ll email you SEENIK news about once a month. Unsubscribe at any time. See our{' '}
+          <a href={PRIVACY_POLICY_URL} className="underline underline-offset-4 hover:text-black transition-colors">
+            Privacy Policy
+          </a>
+          .
         </p>
       </form>
     </div>
