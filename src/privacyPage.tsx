@@ -55,7 +55,8 @@ function PrivacyPage() {
           <p>
             The only personal information we collect through this website is your{' '}
             <strong className="font-medium text-white">email address</strong>, which you enter in our sign-up form. We
-            also keep the date and time of your sign-up, so we have a record of when you agreed to hear from us.
+            also keep the date and time of your sign-up and the IP address it came from, so we have a record of when
+            you agreed to hear from us.
           </p>
           <p>
             We do not ask for your name, address, phone number or payment details on this website, and there are no
