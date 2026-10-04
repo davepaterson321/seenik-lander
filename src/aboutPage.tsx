@@ -1,14 +1,10 @@
-import type { ReactNode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrandTopBar } from '@/app/components/BrandTopBar';
 import { CollectionFooter } from '@/app/components/CollectionFooter';
 import { SiteFooter } from '@/app/components/SiteFooter';
 import '@/styles/index.css';
 
-const linkClass =
-  'underline decoration-white/40 underline-offset-4 hover:text-white hover:decoration-white transition-colors';
-
-const SECTIONS: { heading: string; paragraphs: ReactNode[] }[] = [
+const SECTIONS = [
   {
     heading: 'Background',
     paragraphs: [
@@ -35,13 +31,7 @@ const SECTIONS: { heading: string; paragraphs: ReactNode[] }[] = [
   {
     heading: 'An expanding range',
     paragraphs: [
-      <>
-        With a passion for Warhammer and{' '}
-        <a href="/tabletop-gaming-backdrops.html" className={linkClass}>
-          tabletop gaming
-        </a>
-        , we are also proud to offer an expanding range of backdrops that work well as a background for larger tabletop battalions and during gaming scenarios.
-      </>,
+      'With a passion for Warhammer and tabletop gaming, we are also proud to offer an expanding range of backdrops that work well as a background for larger tabletop battalions and during gaming scenarios.',
     ],
   },
 ];
@@ -62,8 +52,8 @@ function AboutPage() {
               {section.heading}
             </h2>
             <div className="mt-8 space-y-6 type-body-lg text-gray-300 leading-relaxed">
-              {section.paragraphs.map((paragraph, index) => (
-                <p key={index}>{paragraph}</p>
+              {section.paragraphs.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
               ))}
             </div>
           </section>
