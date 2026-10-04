@@ -1,6 +1,5 @@
 import { Hero } from '@/app/components/Hero';
 import { ShowcaseGallery } from '@/app/components/ShowcaseGallery';
-import { UpcomingBackdrops } from '@/app/components/UpcomingBackdrops';
 import { BackdropFormat } from '@/app/components/BackdropFormat';
 import { MaterialsAndVersatility } from '@/app/components/MaterialsAndVersatility';
 import { CollectionFooter } from '@/app/components/CollectionFooter';
@@ -17,7 +16,9 @@ export default function App() {
 
       <MaterialsAndVersatility />
 
-      <UpcomingBackdrops />
+      {/* Upcoming releases is hidden until items are close to release.
+          To bring it back: import UpcomingBackdrops from '@/app/components/UpcomingBackdrops'
+          and render <UpcomingBackdrops /> here. */}
 
       <CollectionFooter />
       <SiteFooter />
