@@ -145,7 +145,7 @@ export function ShowcaseGallery() {
                             {item.tag}
                           </span>
                         ) : null}
-                        <h4 className="type-heading-prominent text-white uppercase tracking-[0.12em] font-light mb-3 break-words">
+                        <h4 className="type-heading text-white uppercase tracking-[0.12em] font-light mb-3 break-words">
                           {item.title}
                         </h4>
                         {item.blurb ? (

@@ -129,20 +129,12 @@
     @apply text-xl md:text-2xl;
   }
 
-  .type-heading-prominent {
-    @apply text-xl md:text-2xl lg:text-3xl;
-  }
-
   .type-heading-lg {
     @apply text-xl md:text-3xl;
   }
 
   .type-heading-xl {
     @apply text-3xl md:text-4xl;
-  }
-
-  .type-title {
-    @apply text-lg md:text-xl;
   }
 
   .type-body {

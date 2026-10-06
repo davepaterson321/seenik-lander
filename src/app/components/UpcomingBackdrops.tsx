@@ -56,7 +56,7 @@ export function UpcomingBackdrops() {
                       {item.categoryTag}
                     </span>
                   ) : null}
-                  <h4 className="type-title text-white uppercase tracking-[0.12em] font-light break-words">
+                  <h4 className="type-lead text-white uppercase tracking-[0.12em] font-light break-words">
                     {item.title}
                   </h4>
                   <a
