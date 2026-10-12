@@ -84,6 +84,8 @@ const buyNowItems: BuyNowImage[] = [
 export function ShowcaseGallery() {
   const [carouselApi, setCarouselApi] = useState<CarouselApi>();
   const [currentSlide, setCurrentSlide] = useState(1);
+  const [canScrollPrev, setCanScrollPrev] = useState(false);
+  const [canScrollNext, setCanScrollNext] = useState(true);
   const [slideCount, setSlideCount] = useState(0);
 
   useEffect(() => {
@@ -92,6 +94,8 @@ export function ShowcaseGallery() {
     const updateCarouselIndicator = () => {
       setCurrentSlide(carouselApi.selectedScrollSnap() + 1);
       setSlideCount(carouselApi.scrollSnapList().length);
+      setCanScrollPrev(carouselApi.canScrollPrev());
+      setCanScrollNext(carouselApi.canScrollNext());
     };
 
     updateCarouselIndicator();
@@ -122,7 +126,7 @@ export function ShowcaseGallery() {
           </div>
 
           <Carousel
-            opts={{ loop: buyNowItems.length > 1, align: 'start' }}
+            opts={{ loop: false, align: 'start' }}
             setApi={setCarouselApi}
             aria-label="World War in-stock backdrop listings"
             className="w-full"
@@ -181,7 +185,7 @@ export function ShowcaseGallery() {
                 <button
                   type="button"
                   onClick={() => carouselApi?.scrollPrev()}
-                  disabled={!carouselApi}
+                  disabled={!carouselApi || !canScrollPrev}
                   aria-label="Previous in-stock backdrop"
                   className="inline-flex size-8 cursor-pointer items-center justify-center rounded-full text-white/80 transition hover:bg-white/10 hover:text-white disabled:cursor-not-allowed disabled:opacity-40"
                 >
@@ -199,7 +203,7 @@ export function ShowcaseGallery() {
                 <button
                   type="button"
                   onClick={() => carouselApi?.scrollNext()}
-                  disabled={!carouselApi}
+                  disabled={!carouselApi || !canScrollNext}
                   aria-label="Next in-stock backdrop"
                   className="inline-flex size-8 cursor-pointer items-center justify-center rounded-full text-white/80 transition hover:bg-white/10 hover:text-white disabled:cursor-not-allowed disabled:opacity-40"
                 >
