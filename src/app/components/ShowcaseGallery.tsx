@@ -77,6 +77,7 @@ const buyNowItems: BuyNowImage[] = [
     title: 'North Africa',
     tag: 'Best seller',
     ebayUrl: EBAY_NORTH_AFRICA_LISTING_URL,
+    inStock: false,
   },
 ];
 
