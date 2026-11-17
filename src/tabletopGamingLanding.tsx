@@ -4,7 +4,7 @@ import { BrandTopBar } from '@/app/components/BrandTopBar';
 import { CollectionFooter } from '@/app/components/CollectionFooter';
 import { SiteFooter } from '@/app/components/SiteFooter';
 import { LandingSplitSection } from '@/app/components/LandingSplitSection';
-import sandCitadel from '@/assets/showcase/WH-sand-citadel.jpg';
+import millennium41 from '@/assets/showcase/41st-millennium.jpg';
 import gamingDice from '@/assets/tabletop-landing/gaming-dice.jpeg';
 import northAfrica from '@/assets/tabletop-landing/north-africa.jpg';
 import civilWar from '@/assets/tabletop-landing/civil-war.jpg';
@@ -91,8 +91,8 @@ function TabletopGamingLandingPage() {
           </p>
           <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 md:mt-10">
             <article className="rounded-lg border border-white/10 overflow-hidden bg-black/20">
-              <img src={sandCitadel} alt="Desert Citadel fantasy tabletop gaming backdrop" className="w-full h-64 object-cover" />
-              <p className="px-4 py-3.5 type-control text-gray-300 uppercase tracking-[0.12em]">Desert Citadel</p>
+              <img src={millennium41} alt="41st Millennium fantasy tabletop gaming backdrop" className="w-full h-64 object-cover" />
+              <p className="px-4 py-3.5 type-control text-gray-300 uppercase tracking-[0.12em]">41st Millennium</p>
             </article>
             <article className="rounded-lg border border-white/10 overflow-hidden bg-black/20">
               <img src={northAfrica} alt="North Africa themed tabletop gaming backdrop" className="w-full h-64 object-cover" />
