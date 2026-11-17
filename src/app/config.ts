@@ -27,6 +27,10 @@ export const EBAY_ARMAGEDDON_LISTING_URL = 'https://www.ebay.com/itm/80075242757
 export const EBAY_SOMME_LISTING_URL = 'https://www.ebay.com/itm/800752443386';
 /** Eastern Europe / Crimea backdrop listing on eBay. */
 export const EBAY_CRIMEA_LISTING_URL = 'https://www.ebay.com/itm/800031658636';
+/** Black Forest backdrop listing on eBay. */
+export const EBAY_BLACK_FOREST_LISTING_URL = 'https://www.ebay.com/itm/800873086128';
+/** Korean War backdrop listing on eBay. */
+export const EBAY_KOREAN_WAR_LISTING_URL = 'https://www.ebay.com/itm/800900623913';
 /** French Town backdrop listing on eBay. */
 export const EBAY_FRENCH_TOWN_LISTING_URL = 'https://www.ebay.com/itm/800656880838';
 /**

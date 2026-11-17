@@ -20,6 +20,9 @@ Concise rules for coding in this repo. For Cursor-specific mechanics, see [Curso
 
 - Showcase imagery lives under `src/assets/showcase/`.
 - Listing URLs and similar config belong in [`src/app/config.ts`](src/app/config.ts) rather than hard-coded in many files.
+- New products go at the **front** of their carousel (`buyNowItems` in `ShowcaseGallery.tsx`, `discoverItems` in `DiscoverTheRangeCarousel.tsx`) unless told otherwise. World War products go in the "Shop World War Backdrops" carousel; everything else in "More eras & theatres".
+- Adding a product: put the image in `src/assets/showcase/` (already ~1180px wide, under ~600 KB; compress larger ones), add an `EBAY_*_LISTING_URL` constant in `config.ts` (`https://www.ebay.com/itm/<item number>`), then add the carousel entry.
+- Out of stock: set `inStock: false` on the item's entry. Back in stock: remove that line (and update the eBay URL if the listing changed).
 
 ## Nested instructions (optional)
 

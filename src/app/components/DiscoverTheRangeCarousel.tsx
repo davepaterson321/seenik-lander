@@ -12,12 +12,14 @@ import {
   EBAY_CRIMEA_LISTING_URL,
   EBAY_GULF_WAR_LISTING_URL,
   EBAY_JACOBEAN_LISTING_URL,
+  EBAY_KOREAN_WAR_LISTING_URL,
   EBAY_NAPOLEONIC_LISTING_URL,
 } from '@/app/config';
 
 import Crimea from '../../assets/showcase/crimea.jpg';
 import Jacobean from '../../assets/showcase/jacobean.jpg';
 import Napoleonic from '../../assets/showcase/napoleonic.jpg';
+import KoreanWar from '../../assets/showcase/korean-war.jpg';
 import OilFields from '../../assets/showcase/oil-fields.jpg';
 
 type DiscoverItem = {
@@ -31,6 +33,12 @@ type DiscoverItem = {
 };
 
 const discoverItems: DiscoverItem[] = [
+  {
+    src: KoreanWar,
+    alt: 'Korean War backdrop',
+    title: 'Korean War',
+    ebayUrl: EBAY_KOREAN_WAR_LISTING_URL,
+  },
   {
     src: Napoleonic,
     alt: 'Napoleonic backdrop',

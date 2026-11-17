@@ -9,6 +9,7 @@ import {
   CarouselItem,
 } from './ui/carousel';
 import {
+  EBAY_BLACK_FOREST_LISTING_URL,
   EBAY_FALL_OF_BERLIN_LISTING_URL,
   EBAY_FRENCH_TOWN_LISTING_URL,
   EBAY_NORTH_AFRICA_LISTING_URL,
@@ -17,6 +18,7 @@ import {
   EBAY_STALINGRAD_LISTING_URL,
 } from '@/app/config';
 
+import BlackForest from '../../assets/showcase/black-forest.jpg';
 import NorthAfrica from '../../assets/showcase/north-africa.jpg';
 import FrenchTown from '../../assets/showcase/french-town2.jpg';
 import Somme from '../../assets/showcase/somme.jpg';
@@ -41,6 +43,12 @@ type BuyNowImage = {
 
 const buyNowItems: BuyNowImage[] = [
   {
+    src: BlackForest,
+    alt: 'Black Forest backdrop',
+    title: 'Black Forest',
+    ebayUrl: EBAY_BLACK_FOREST_LISTING_URL,
+  },
+  {
     src: Pacific,
     alt: 'WW2 Pacific backdrop',
     title: 'WW2 Pacific',
@@ -64,6 +72,7 @@ const buyNowItems: BuyNowImage[] = [
     alt: 'WW1 Western Front backdrop',
     title: 'WW1 Western Front',
     ebayUrl: EBAY_SOMME_LISTING_URL,
+    inStock: false,
   },
   {
     src: Stalingrad,
